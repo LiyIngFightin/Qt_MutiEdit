@@ -1,0 +1,23 @@
+<RCC>
+    <qresource prefix="/new/Icon">
+        <file>Icon/about.ico</file>
+        <file>Icon/aboutqt.ico</file>
+        <file>Icon/cascade.ico</file>
+        <file>Icon/close.ico</file>
+        <file>Icon/closeall.ico</file>
+        <file>Icon/copy.ico</file>
+        <file>Icon/cut.ico</file>
+        <file>Icon/exit.ico</file>
+        <file>Icon/find.ico</file>
+        <file>Icon/new.ico</file>
+        <file>Icon/next.ico</file>
+        <file>Icon/open.ico</file>
+        <file>Icon/paste.ico</file>
+        <file>Icon/previous.ico</file>
+        <file>Icon/redo.ico</file>
+        <file>Icon/save.ico</file>
+        <file>Icon/saveas.ico</file>
+        <file>Icon/tile.ico</file>
+        <file>Icon/undo.ico</file>
+    </qresource>
+</RCC>
