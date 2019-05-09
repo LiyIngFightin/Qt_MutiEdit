@@ -6,12 +6,19 @@
 #include <QMdiSubWindow>
 #include <QDir>
 #include <QMessageBox>
+#include <QPixmap>
+#include <QBitmap>
+#include <QPainter>
+#include <windows.h>
+#include <QLabel>
+#include <QMovie>
 MainWindow::MainWindow(QWidget *parent) :
     QMainWindow(parent),
     ui(new Ui::MainWindow)
 {
     ui->setupUi(this);
     Init();
+    Sleep(1000);
 }
 
 MainWindow::~MainWindow()
@@ -132,11 +139,25 @@ void MainWindow::doProcessActionSlot()
         ui->mdiArea->activatePreviousSubWindow();
     }
     else if(act == ui->aboutAction){
-        QWidget *help=new QWidget;
-        help->set
+
+        QWidget *about=new QWidget(this);
+        QLabel *label=new QLabel(about);
+//        QMovie *movie=new QMovie("../QT_MutiEdit/plane.gif");
+//        movie->start();
+
+//        label->setMovie(movie);
+        //label->resize(500,300);
+        QPixmap pix("../QT_MutiEdit/help.jpg");
+        label->setPixmap(pix);
+        label->setScaledContents(true);
+        label->adjustSize();
+        about->show();
+
+
+
     }
     else if(act == ui->qtAction){
-
+        qApp->aboutQt();
     }
 }
 
