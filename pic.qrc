@@ -1,0 +1,7 @@
+<RCC>
+    <qresource prefix="/new/pic">
+        <file>Icon/book.jpg</file>
+        <file>Icon/help.jpg</file>
+        <file>Icon/setup.jpg</file>
+    </qresource>
+</RCC>

@@ -140,17 +140,18 @@ void MainWindow::doProcessActionSlot()
     }
     else if(act == ui->aboutAction){
 
-        QWidget *about=new QWidget(this);
+        QWidget *about=new QWidget;
+        about->setWindowTitle("你猜猜");
+        about->setWindowIcon(QIcon(":/new/Icon/Icon/about.ico"));
         QLabel *label=new QLabel(about);
-//        QMovie *movie=new QMovie("../QT_MutiEdit/plane.gif");
-//        movie->start();
 
-//        label->setMovie(movie);
-        //label->resize(500,300);
-        QPixmap pix("../QT_MutiEdit/help.jpg");
+        QPixmap pix(":/new/pic/Icon/help");
         label->setPixmap(pix);
         label->setScaledContents(true);
-        label->adjustSize();
+
+        label->setMinimumSize(QSize(500,300));
+        QGridLayout *layout=new QGridLayout(about);
+        layout->addWidget(label);
         about->show();
 
 
